@@ -1,0 +1,24 @@
+<p>employeelist works!</p>
+<h2>{{ErrorMsg}}</h2>
+
+<table class="table table-bordered table-hovereds ">
+    <thead class="thead-dark"><tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Role</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <th>{{employee.FirstName}}</th>
+            <th>{{employee.LastName}}</th>
+            <th>{{employee.Email}}</th>
+            <th>{{employee.Password}}</th>
+            <th>{{employee.Role}}</th>
+
+        </tr>
+    </tbody>
+</table>
+    <button type="button" [routerLink]="['/login']">Back</button>

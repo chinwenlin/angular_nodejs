@@ -1,0 +1,57 @@
+<div class="formcontainer">
+        <div >
+            <form class="user_card"  [formGroup]="myForm">
+                <div class="header">Register</div>
+                <div class="form-group">
+                      
+                            <label> UserName</label>
+                            <input class="form-control input_user"type="text" formControlName="username" matInput required id="firstname">
+                        
+                        <span *ngIf="isValid('username')">Username is required</span>
+                    </div>
+                <div>
+                   
+                        <label> LastName:</label>
+                        <input class="form-control input_user" type="text" formControlName="lastname" matInput  required id="lastname">
+                                    
+                    <span *ngIf="isValid('lastname')">Lastname is invalid</span>
+                </div>
+                
+                <div>
+                        
+                            <label>Email</label>
+                            <input class="form-control input_user"type="text" formControlName="email" matInput required id="email">
+                        
+                        <span *ngIf="isValid('email')">Email is invalid</span>
+                    </div>
+                <div>
+                   
+                        <label>Password</label>
+                        <input class="form-control input_user"type="password" formControlName="password" matInput required id="pass">
+                    
+                    <span *ngIf="isValid('password')">Password is a mandatory field</span>
+                </div>
+                <div>
+                    
+                        <label> Role</label>
+                        <input class="form-control input_user"type="text" formControlName="role" matInput required id="role">
+                    
+                    <span *ngIf="isValid('role')">Role is required</span>
+                </div>
+                <div style="width: 290px; padding: 20px;">
+                    <button class="login_btn" (click)="register()">Register</button>
+                </div>
+                <div style="width: 290px; padding: 20px;">
+                        <button class="btn btn-info btn-md" (click)="movetologin()">Login</button>
+                    </div>
+    
+                <div style="text-align: center;">                
+                    {{successMessage}}
+                </div>
+            </form>
+        </div>
+    
+        <div>
+            
+        </div>
+    </div>

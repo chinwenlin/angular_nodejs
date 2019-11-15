@@ -1,0 +1,61 @@
+<div class="container">
+<form class="user_card" [formGroup]="uploadForm" (ngSubmit)="logForm(uploadForm.value);onSubmit()">
+    <div class="form-group">
+        <label>Firstname:</label>
+        <input type="text" name="firstname"  formControlName="firstname">
+        <span class="alert"*ngIf="isValid('firstname')">FirstName can not be blank</span>
+    </div>
+    <div class="form-group">
+        <label>Lastname:</label>
+        <input type="text" name="lastname"  formControlName="lastname">
+        <span class="alert"*ngIf="isValid('lastname')">Last Name is required</span>
+    </div>
+    <div class="form-group">
+        <label>Phone:</label>
+        <input type="text" name="phone"  formControlName="phone">
+        <label>Email:</label>
+        <input type="email"name="email"  formControlName="email">
+    </div>
+
+      
+      <div class="form-group">
+        <label>Street:</label>
+        <input type="text" name="street"  formControlName="street"> 
+    </div>   
+    <div class="form-group">
+        <label>City:</label>
+        <input type="text" name="city"  formControlName="city">
+    </div> 
+    <div class="form-group">
+        <label>State:</label>
+        <input type="text" name="state"  formControlName="state">
+     </div>   
+     <div class="form-group">      
+        <label>Zip code:</label>
+        <input type="text" name="zip"  formControlName="zip">
+     </div>  
+     <div class="form-group"> 
+        <label>Country:</label>
+        <input type="text" name="country"  formControlName="country">
+    </div>     
+    <div class="form-group">
+        <label>Donation Type:</label>
+        <select formControlName="donationtype">
+            <option >Mighty Warriors</option>
+            <option>Run for the sun</option>
+            <option >Mission Trip</option>
+            <option >Memorial Gift</option>
+        </select>
+
+    </div>
+    <div>
+        <label>Amount:</label>
+        <input type="text" name="amount" formControlName="amount">
+        <span class="alert"*ngIf="isValid('amount')">Amount is required</span>
+    </div>
+    
+      <button type="submit" > Continue</button>
+      <button type="button" (click)="back()" >Cancel</button>
+
+ </form>
+</div>

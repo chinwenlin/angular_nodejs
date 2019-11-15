@@ -1,0 +1,10 @@
+<p>Make a donations!</p>
+<h2>Click on any one donation type to continue!</h2>
+       <div *ngFor="let donation of donations">
+                <button type="button" class="btn btn-secondary" [routerLink]="['/form']"> {{donation.Type}} </button>
+        </div>
+
+        <div>
+            <a  [routerLink]="['/login']">Back</a>
+        </div>
+  
